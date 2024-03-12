@@ -28,7 +28,7 @@ if (lazyMatches?.length) {
       })
     }) ?? [],
   ).then(() => {
-    const devupHeadNode = document.querySelectorAll('[data-devup="static"]')
+    const devupHeadNode = document.querySelectorAll('[data-nar="static"]')
     hydrateRoot(
       document,
       <HelmetProvider>
