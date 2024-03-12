@@ -1,0 +1,183 @@
+{
+  "name": "vite-plugin-next-app-router",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "vite-plugin-next-app-router",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./client": {
+      "import": "./dist/client/index.js",
+      "require": "./dist/client/index.cjs",
+      "types": "./dist/client/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext .ts,.tsx",
+    "test": "vitest"
+  },
+  "files": [
+    "dist",
+    "main.tsx"
+  ],
+  "dependencies": {
+    "react-helmet-async": "^2.0.4",
+    "react-dom": "^18.2.0",
+    "eslint-plugin-unused-imports": "^3.1.0",
+    "react-is": "^18.2.0",
+    "astring": "^1.8.6",
+    "react-router-dom": "^6.22.3",
+    "@vanilla-extract/vite-plugin": "^4.0.6",
+    "react": "^18.2.0",
+    "chalk": "^5.3.0",
+    "globby": "^14.0.1"
+  },
+  "peerDependencies": {
+    "react-dom": "*",
+    "react-router-dom": "*",
+    "react": "*"
+  },
+  "devDependencies": {
+    "vite": "^5.1.6",
+    "vite-plugin-dts": "^3.7.3",
+    "@types/react-dom": "^18.2.21",
+    "@types/react-is": "^18.2.4",
+    "@types/react": "^18.2.64",
+    "vitest": "^1.3.1",
+    "happy-dom": "^13.7.8",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.2",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "eslint-plugin-storybook": "^0.8.0",
+    "eslint-plugin-unused-imports": "^3.1.0",
+    "prettier": "^3.2.5"
+  },
+  "eslintConfig": {
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": [
+    "**/node_modules/",
+    "**/build/",
+    "!**/src/**",
+    "**/dist/",
+    "**/out/",
+    "**/.next/",
+    "**/public/",
+    "**/.df/"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "google",
+    "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:storybook/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "prettier",
+    "react-hooks",
+    "simple-import-sort",
+    "unused-imports",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "require-jsdoc": "off",
+    "valid-jsdoc": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "trailingComma": "all",
+        "singleQuote": true,
+        "semi": false
+      }
+    ],
+    "no-trailing-spaces": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-constant-condition": ["error", { "checkLoops": false }],
+    "react/jsx-curly-brace-presence": "error",
+    "camelcase": "off",
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "react-hooks/exhaustive-deps": [
+      "warn",
+      {
+        "additionalHooks": "useSafeEffect"
+      }
+    ],
+    "react/jsx-sort-props": [
+      "error",
+      {
+        "callbacksLast": false,
+        "shorthandFirst": false,
+        "shorthandLast": false,
+        "ignoreCase": false,
+        "noSortAlphabetically": false,
+        "reservedFirst": true
+      }
+    ],
+    "react/sort-default-props": "error",
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "comma-dangle": "off",
+    "no-console": [
+      "error",
+      {
+        "allow": ["info", "debug", "warn", "error"]
+      }
+    ],
+    "spaced-comment": [
+      "error",
+      "always",
+      {
+        "markers": ["/"]
+      }
+    ]
+  }
+},
+  "sideEffects": false
+}
+
